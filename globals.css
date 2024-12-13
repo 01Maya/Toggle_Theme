@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --transition-duration: 500ms;
+}
+
+body {
+  transition: background-color var(--transition-duration) ease-in-out,
+              color var(--transition-duration) ease-in-out;
+}
+
+button {
+  transition: transform 150ms ease-in-out, box-shadow 150ms ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.dark button:hover {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
